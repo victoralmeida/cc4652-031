@@ -32,7 +32,9 @@ SOURCES += \
 HEADERS += \
         mainwindow.h \
     cadastrarcliente.h \
-    gerenciarclientes.h
+    gerenciarclientes.h \
+    lde.h \
+    no.h
 
 FORMS += \
         mainwindow.ui \

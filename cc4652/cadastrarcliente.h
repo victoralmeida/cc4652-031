@@ -15,6 +15,9 @@ public:
     explicit CadastrarCliente(QWidget *parent = 0);
     ~CadastrarCliente();
 
+private slots:
+    void on_pushButton_3_clicked();
+
 private:
     Ui::CadastrarCliente *ui;
 };
