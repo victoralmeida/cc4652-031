@@ -17,23 +17,23 @@
    <widget class="QPushButton" name="btCadastrar">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>80</y>
-      <width>161</width>
-      <height>25</height>
+      <x>40</x>
+      <y>40</y>
+      <width>171</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string>Cadastrar Cliente</string>
+     <string>Gerenciar Clientes</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btGerenciar">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>130</y>
-      <width>161</width>
-      <height>25</height>
+      <x>220</x>
+      <y>40</y>
+      <width>171</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
@@ -43,8 +43,8 @@
    <widget class="QPushButton" name="btHist">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>180</y>
+      <x>20</x>
+      <y>310</y>
       <width>161</width>
       <height>25</height>
      </rect>
@@ -56,8 +56,8 @@
    <widget class="QPushButton" name="btInfo">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>230</y>
+      <x>20</x>
+      <y>350</y>
       <width>89</width>
       <height>25</height>
      </rect>
