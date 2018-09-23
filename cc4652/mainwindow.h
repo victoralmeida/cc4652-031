@@ -5,6 +5,8 @@
 
 #include "lde.h"
 #include "no.h"
+#include "ldde.h"
+#include "no-ldde.h"
 
 
 namespace Ui {
@@ -19,6 +21,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     Lde listaCliente;
+    Ldde listaReserva;
 
 
 
@@ -30,6 +33,18 @@ private slots:
 
 
     void on_deletarCliente_clicked();
+
+    void on_gerenciarReservas_clicked();
+
+    void on_gerenciarClientes_clicked();
+
+    void on_reservar_clicked();
+
+
+
+    void on_consultarReserva_clicked();
+
+    void on_gerenciarReservas_2_clicked();
 
 private:
     Ui::MainWindow *ui;
