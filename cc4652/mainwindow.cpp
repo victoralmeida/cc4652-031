@@ -4,6 +4,8 @@
 #include "lde.h"
 #include "no.h"
 
+using namespace std;
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -21,7 +23,7 @@ MainWindow::~MainWindow()
 
 
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_cadastrarCliente_clicked()
 {
     QString nome = ui->nome->text();
     QString cpf = ui->cpf->text();
@@ -37,13 +39,37 @@ void MainWindow::on_pushButton_clicked()
        QMessageBox::information(this, "Status", "Não foi possível cadastrar o cliente");
     }
 
+    ui->nome->clear();
+    ui->cpf->clear();
+    ui->telefone->clear();
+    ui->dia->clear();
+    ui->mes->clear();
+    ui->ano->clear();
+
 }
 
-void MainWindow::on_pushButton_2_clicked()
+
+
+void MainWindow::on_consultarCliente_clicked()
 {
     int cpf = ui->buscar->text().toInt();
     No *respostaBusca = listaCliente.busca(cpf);
 
-    QString nomeBuscado = respostaBusca->getNome();
-    QMessageBox::information(this, "Status", nomeBuscado);
+    QString nome = respostaBusca->getNome();
+    QString cpfBuscado = respostaBusca->getCPF();
+    QString telefone = respostaBusca->getTelefone();
+
+    QString dia = QString::number(respostaBusca->getDia());
+    QString mes = QString::number(respostaBusca->getMes());
+    QString ano = QString::number(respostaBusca->getAno());
+
+    ui->nomeConsulta->setText(nome);
+    ui->cfpConsulta->setText(cpfBuscado);
+    ui->telefoneConsulta->setText(telefone);
+    ui->diaConsulta->setText(dia);
+    ui->mesConsulta->setText(mes);
+    ui->anoConsulta->setText(ano);
+
+
 }
+

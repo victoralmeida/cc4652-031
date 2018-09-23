@@ -34,9 +34,19 @@ public:
       return cpf;
   }
 
+  QString getTelefone(){
+      return telefone;
+  }
 
   int getDia(){
       return dia;
+  }
+
+  int getMes(){
+      return mes;
+  }
+  int getAno(){
+      return ano;
   }
 
 };
