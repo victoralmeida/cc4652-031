@@ -29,6 +29,8 @@ private slots:
     void on_consultarCliente_clicked();
 
 
+    void on_deletarCliente_clicked();
+
 private:
     Ui::MainWindow *ui;
 

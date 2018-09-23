@@ -303,7 +303,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Consultar</string>
+     <string>Deletar</string>
     </property>
    </widget>
    <widget class="QWidget" name="">

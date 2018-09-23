@@ -52,7 +52,7 @@ void MainWindow::on_cadastrarCliente_clicked()
 
 void MainWindow::on_consultarCliente_clicked()
 {
-    int cpf = ui->buscar->text().toInt();
+    QString cpf = ui->buscar->text();
     No *respostaBusca = listaCliente.busca(cpf);
 
     QString nome = respostaBusca->getNome();
@@ -73,3 +73,12 @@ void MainWindow::on_consultarCliente_clicked()
 
 }
 
+
+void MainWindow::on_deletarCliente_clicked()
+{
+    QString cliente = ui->deletar->text();
+    if(listaCliente.remove(cliente))
+        QMessageBox::information(this, "Status", "Deletado com sucesso");
+    else
+        QMessageBox::information(this, "Status", "Não foi possível deletar o cliente");
+}
