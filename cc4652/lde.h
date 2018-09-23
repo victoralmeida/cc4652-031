@@ -3,6 +3,8 @@
 
 #include<QMessageBox>
 #include<cstdlib>
+#include<iostream>
+
 #include "no.h"
 using namespace std;
 
@@ -19,11 +21,41 @@ public:
            return false;
         }
 
-        primeiro=novo;
+        No* anterior = NULL;
+        No* atual = primeiro;
+
+        while(atual!=NULL && atual->getCPF() < novo->getCPF() ){
+          anterior = atual;
+          atual = atual->proximo;
+        }
+
+        if(anterior)
+          anterior->proximo = novo;
+        else
+          primeiro = novo;
+
+        novo->proximo = atual;
         return true;
 
 
     }
+
+
+    No* busca(int valor){
+
+      No* a=primeiro;
+      while(a && a->getCPF().toInt()<=valor){
+        if(a->getCPF().toInt()==valor)
+          return a;
+        a=a->proximo;
+      }
+
+      a = new No("a", "a", "a", -1, -1, -1);
+      return a;
+
+    }
+
+
 
 };
 

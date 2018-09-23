@@ -15,17 +15,29 @@ private:
 
 
 public:
-  No(QString nome, QString cpf, QString telefone, int dia, int mes, int ano){
-      nome =nome;
-      cpf=cpf;
-      telefone=telefone;
-      dia=dia;
-      mes=mes;
-      ano=ano;
+  No(QString nomeP, QString cpfP, QString telefoneP, int diaP, int mesP, int anoP){
+      nome =nomeP;
+      cpf=cpfP;
+      telefone=telefoneP;
+      dia=diaP;
+      mes=mesP;
+      ano=anoP;
+  }
+
+  No* proximo;
+
+  QString getNome(){
+      return nome;
+  }
+
+  QString getCPF(){
+      return cpf;
   }
 
 
-  No* proximo;
+  int getDia(){
+      return dia;
+  }
 
 };
 
