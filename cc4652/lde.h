@@ -16,6 +16,10 @@ public:
     Lde():primeiro(NULL){}
 
     bool insere(QString nome, QString cpf, QString telefone, int dia, int mes, int ano){
+        No*n = this->busca(cpf);
+        if(n->getAno()!=0)//Impede a criação de dois cliente com o msm CPF
+            return false;
+
         No *novo = new No(nome, cpf, telefone, dia, mes, ano);
         if(!novo){
            return false;
